@@ -1,0 +1,300 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  font-family: "Noto Sans KR", sans-serif;
+  color:#333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  
+}
+img{
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+
+.inner{
+  width: 1100px;
+  /* 가운데 정렬 */
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+  background-color: rgba(255, 255, 255,.3);
+  
+}
+
+.btn:hover{
+  background-color: #333;
+  color: #fff;
+}
+
+/* header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 247, 227);
+  border-bottom: 1px solid #c8c8c8;
+  z-index: 10;
+}
+
+header > .inner{
+  height: 120px;
+  position: relative;
+  z-index: 10;
+}
+
+/* .sub-menu */
+header .sub-menu{
+  position: absolute;
+  top:10px;
+  right: 0;
+  display: flex;
+  z-index: 10;
+  
+}
+
+header .sub-menu ul.menu{
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+header .sub-menu ul.menu li{
+  position: relative;
+} 
+
+header .sub-menu ul.menu li::before{
+  content: "";
+  /* 구분선 */
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  /* position 자동으로 block으로 바뀜 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child:before{
+  display: none;
+}
+
+header .sub-menu ul.menu li a{
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+
+header .logo{
+  height: 100px;
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+header img{
+  position: absolute;
+  height: 120px;
+  width: 90px;
+}
+
+/* main-menu */
+header .main_menu{
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+header .main_menu .menu_list{
+  display: flex;
+  
+}
+
+header .main_menu .menu_list > li a{
+  display: block;
+  padding: 10px 60px 24px 60px;
+  color: black;
+}
+
+
+/* mypages */
+.mypages{
+  padding-top: 120px;
+  background-color: #f6f5ef;
+}
+
+.mypages .inner{
+  
+}
+
+.mypages .inner h1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #333;
+  font-size: 36px;
+  letter-spacing: -1px;
+  
+}
+.mypages .inner .mypagebox {
+  display: flex;
+  
+}
+
+
+.mypages .inner .mypagebox .box{
+  background-color: #f0f075;
+  width: 340px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-left: 70px;
+}
+
+
+.mypages .inner .mypagebox .box .content{
+  position: absolute;
+  padding: 80px;
+  text-align: center;
+ 
+}
+.mypages .inner .box .pform{
+ 
+}
+
+.mypages .inner .box .pform .profile{
+
+}
+
+.mypages .inner .box .pform .profile img{
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  
+}
+
+.mypages .inner .box .pform p{
+  margin-top: 20px;
+  font-size: 28px;
+}
+
+.mypages .inner .box .pform .userName{
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.mypages .myactive{
+  margin-left: 100px;
+}
+.mypages .myactive h1{
+  font-size: 25px;
+}
+.mypages .myactive .active-box{
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  
+}
+
+
+
+/* footer */
+footer{
+  background-color: #F9F0E7;
+  border-top: 1px solid #333;
+}
+
+footer .inner{
+  padding: 40px 0 60px 0;
+}
+
+footer .menu{
+  display: flex;
+  justify-content: center;
+}
+footer .menu li{
+  position: relative;
+}
+
+footer .menu li::before{
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+
+footer .menu li:last-child::before{
+  display: none;
+}
+
+footer .menu li a{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+
+footer .menu li a.green{
+  color: #669900;
+}
+
+
+footer .info{
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer .info span:last-child{
+  margin-right: 0;
+}
+footer .copyright{
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}

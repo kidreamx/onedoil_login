@@ -1,0 +1,416 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  font-family: "Noto Sans KR", sans-serif;
+  color:#333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  
+}
+img{
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+
+.inner{
+  width: 1100px;
+  /* 가운데 정렬 */
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+  background-color: rgba(255, 255, 255,.3);
+  
+}
+
+.btn:hover{
+  background-color: #333;
+  color: #fff;
+}
+
+/* header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 247, 227);
+  border-bottom: 1px solid #c8c8c8;
+  z-index: 10;
+}
+
+header > .inner{
+  height: 120px;
+  position: relative;
+  z-index: 10;
+}
+
+/* .sub-menu */
+header .sub-menu{
+  position: absolute;
+  top:10px;
+  right: 0;
+  display: flex;
+  z-index: 10;
+  
+}
+
+header .sub-menu ul.menu{
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+header .sub-menu ul.menu li{
+  position: relative;
+} 
+
+header .sub-menu ul.menu li::before{
+  content: "";
+  /* 구분선 */
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  /* position 자동으로 block으로 바뀜 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child:before{
+  display: none;
+}
+
+header .sub-menu ul.menu li a{
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+
+header .logo{
+  height: 100px;
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+header img{
+  position: absolute;
+  height: 120px;
+  width: 90px;
+}
+
+/* main-menu */
+header .main_menu{
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+header .main_menu .menu_list{
+  display: flex;
+  
+}
+
+header .main_menu .menu_list > li a{
+  display: block;
+  padding: 10px 60px 24px 60px;
+  color: black;
+}
+
+
+
+
+
+/* LOCATION */
+.location{
+  background-color:#FEFAEF;
+  
+}
+
+
+.location .inner{
+  padding: 40px 0;
+}
+
+.location .inner .swiper .swiper-wrapper .swiper-slide img{
+  width: 190px;
+  height: 85px;
+}
+
+.location .swiper{
+  width: 100%;
+  height: 80px;
+}
+
+.location .swiper-prev,
+.location .swiper-next{
+  width: 42px;
+  height: 42px;
+  border: 2px solid black;
+  background-color: #F9E31E;
+  border-radius: 50%;
+  outline: none;
+  color: black;
+  opacity: .3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.location .swiper-prev{
+  left: -100px;
+}
+
+.location .swiper-next{
+  right: -100px;
+}
+
+.location .swiper-prev:hover,
+.location .swiper-next:hover{
+  background-color: #e1f601;
+  color: black;
+
+}
+
+/* footer */
+footer{
+  background-color: #F9F0E7;
+  border-top: 1px solid #333;
+}
+
+footer .inner{
+  padding: 40px 0 60px 0;
+}
+
+footer .menu{
+  display: flex;
+  justify-content: center;
+}
+footer .menu li{
+  position: relative;
+}
+
+footer .menu li::before{
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+
+footer .menu li:last-child::before{
+  display: none;
+}
+
+footer .menu li a{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+
+footer .menu li a.green{
+  color: #669900;
+}
+
+
+footer .info{
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer .info span:last-child{
+  margin-right: 0;
+}
+footer .copyright{
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+
+/*로그인 페이지*/
+.login-page{
+  background-color: #f6f5ef;
+}
+
+.login-page> .inner{
+  padding: 120px 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: #FFF7E3;
+  border-radius: 25px;
+  transition: 0.4s ease-in-out;
+  width : 300px;
+}
+
+.card {
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 22px;
+  transition: all 0.3s;
+  width:300px;
+  margin: auto;
+  
+}
+
+.card2 {
+  border-radius: 0;
+  transition: all 0.2s;
+  margin-top:120px;
+  
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+
+#heading {
+  text-align: center;
+  margin: 2em;
+  color:black;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+.form .btn {
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 2.5em;
+  margin: auto;
+}
+
+.button1 {
+  padding: 10px;
+  /* padding-left: 1.1em;
+  padding-right: 1.1em; */
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button1:hover {
+  background-color: black;
+  color: white;
+}
+
+.button2 {
+  margin-left: 10px;
+  padding: 10px;
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background-color: #252525;
+  color: white;
+  text-align: center;
+}
+
+.button2:hover {
+  background-color: black;
+  color: white;
+}
+
+.button3 {
+  margin-bottom: 3em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button3:hover {
+  background-color: red;
+  color: white;
+}

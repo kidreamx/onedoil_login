@@ -1,0 +1,469 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  font-family: "Noto Sans KR", sans-serif;
+  color:#333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  
+}
+img{
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+/* header */
+.inner{
+  width: 1100px;
+  /* 가운데 정렬 */
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+  background-color: rgba(255, 255, 255,.3);
+  
+}
+
+.btn:hover{
+  background-color: #333;
+  color: #fff;
+}
+
+/* header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 247, 227);
+  border-bottom: 1px solid #c8c8c8;
+  z-index: 10;
+}
+
+header > .inner{
+  height: 120px;
+  position: relative;
+  z-index: 10;
+}
+
+/* .sub-menu */
+header .sub-menu{
+  position: absolute;
+  top:10px;
+  right: 0;
+  display: flex;
+  z-index: 10;
+  
+}
+
+header .sub-menu ul.menu{
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+header .sub-menu ul.menu li{
+  position: relative;
+} 
+
+header .sub-menu ul.menu li::before{
+  content: "";
+  /* 구분선 */
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  /* position 자동으로 block으로 바뀜 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child:before{
+  display: none;
+}
+
+header .sub-menu ul.menu li a{
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+
+header .logo{
+  height: 100px;
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+header img{
+  position: absolute;
+  height: 120px;
+  width: 90px;
+}
+
+/* main-menu */
+header .main_menu{
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+header .main_menu .menu_list{
+  display: flex;
+  
+}
+
+header .main_menu .menu_list > li a{
+  display: block;
+  padding: 10px 60px 24px 60px;
+  color: black;
+}
+/*ondoil profil*/
+/* ondoil profil */
+.profil {
+  margin-top: 120px;
+  background-color: #f6f5ef;
+}
+.profil h2{
+  font-size: 30px;
+  padding-left:20px;
+  padding-top:15px;
+  padding-bottom:25px;
+  font-weight: 700;
+}
+
+
+.profil table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profil td {
+  padding: 20px;
+  border: 1px solid black; /* 테두리 스타일 설정 */
+}
+
+.profil img {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro {
+  vertical-align: top; 
+  
+  
+}
+.intro p {
+  
+  margin-top: 160px;
+  
+  text-align: center;
+}
+table {
+  
+  
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #000;
+}
+
+
+
+
+/* individual style */
+.individual_profile h2{
+  font-size: larger;
+  padding-left:20px;
+  padding-top:25px;
+}
+.card {
+  margin-bottom:60px;
+  width: 280px;
+  height: 280px;
+  top:auto;
+  background: black;
+  border-radius: 32px;
+  padding: 3px;
+  position: relative;
+  box-shadow: #604b4a30 0px 70px 30px -50px;
+  transition: all 0.5s ease-in-out;
+  display: inline-block; /* 추가 */
+  margin-right: 20px; /* 추가 */
+}
+
+.card .mail {
+  position: absolute;
+  right: 2rem;
+  top: 1.4rem;
+  background: transparent;
+  border: none;
+}
+
+.card .mail svg {
+  stroke: #F9F0E7;
+  stroke-width: 3px;
+}
+
+.card .mail svg:hover {
+  stroke: #f55d56;
+}
+
+.card .profile-pic {
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  top: 3px;
+  left: 3px;
+  border-radius: 29px;
+  z-index: 1;
+  border: 0px solid #F9F0E7;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.card .profile-pic img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.card .profile-pic svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transform-origin: 45% 20%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.card .bottom {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #F9F0E7;
+  top: 80%;
+  border-radius: 29px;
+  z-index: 2;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.card .bottom .content {
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 160px;
+}
+
+.card .bottom .content .name {
+  display: block;
+  font-size: 1.2em;
+  color: balck;
+  font-weight: bold;
+}
+
+.card .bottom .content .about-me {
+  display: block;
+  font-size: 0.7rem;
+  color: black;
+  margin-top: 1rem;
+}
+
+.card .bottom .bottom-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .bottom .bottom-bottom .social-links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.card .bottom .bottom-bottom .social-links-container svg {
+  height: 20px;
+  fill: white;
+  filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+}
+
+.card .bottom .bottom-bottom .social-links-container svg:hover {
+  fill: #f55d56;
+  transform: scale(1.2);
+}
+
+.card .bottom .bottom-bottom .button {
+  background: white;
+  color: #669900;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+}
+
+.card .bottom .bottom-bottom .button:hover {
+  background: #f55d56;
+  color: white;
+}
+
+.card:hover {
+  border-top-left-radius: 55px;
+}
+
+.card:hover .bottom {
+  top: 20%;
+  border-radius: 80px 29px 29px 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.card:hover .profile-pic {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 3;
+  border: 7px solid #669900;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+  transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+
+.card:hover .profile-pic:hover {
+  transform: scale(1.3);
+  border-radius: 0px;
+}
+/*승원이 사진 기준*/
+.card:hover .profile-pic #sw {
+  transform: scale(2.5);
+  -o-object-position: 0px 25px;
+  object-position: 0px 0px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+/*윤경일*/
+.card:hover .profile-pic #gyeong {
+  transform: scale(2.5);
+  -o-object-position: 0px 25px;
+  object-position: -5px -5px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+/*전호원*/
+.card:hover .profile-pic #hw {
+  transform: scale(2.5);
+  -o-object-position: 0px 25px;
+  object-position: -5px -5px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+.card:hover .profile-pic svg {
+  transform: scale(2.5);
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+
+
+/* footer */
+footer{
+  background-color: #F9F0E7;
+  border-top: 1px solid #333;
+}
+
+footer .inner{
+  padding: 40px 0 60px 0;
+}
+
+footer .menu{
+  display: flex;
+  justify-content: center;
+}
+footer .menu li{
+  position: relative;
+}
+
+footer .menu li::before{
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+
+footer .menu li:last-child::before{
+  display: none;
+}
+
+footer .menu li a{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+
+footer .menu li a.green{
+  color: #669900;
+}
+
+
+footer .info{
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer .info span:last-child{
+  margin-right: 0;
+}
+footer .copyright{
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}

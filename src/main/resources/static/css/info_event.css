@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  width: 1100px;
+  /* 가운데 정렬 */
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 247, 227);
+  border-bottom: 1px solid #c8c8c8;
+  z-index: 10;
+}
+
+header>.inner {
+  height: 120px;
+  position: relative;
+  z-index: 10;
+}
+
+/* .sub-menu */
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  z-index: 10;
+}
+
+header .sub-menu ul.menu {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+header .sub-menu ul.menu li {
+  position: relative;
+}
+
+header .sub-menu ul.menu li::before {
+  content: "";
+  /* 구분선 */
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  /* position 자동으로 block으로 바뀜 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child:before {
+  display: none;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+
+header .logo {
+  height: 100px;
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+header img {
+  position: absolute;
+  height: 120px;
+  width: 90px;
+}
+
+/* main-menu */
+header .main_menu {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+header .main_menu .menu_list {
+  display: flex;
+}
+
+header .main_menu .menu_list>li a {
+  display: block;
+  padding: 10px 60px 24px 60px;
+  color: black;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #1b1b1b;
+  color: #ddd;
+}
+
+/* section main body */
+.main_body {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: calc(100vh - 120px); /* 화면 전체 높이에서 헤더 높이를 뺀 값으로 설정 */
+  padding-top: 120px; /* 내용이 헤더와 겹치지 않도록 패딩 추가 */
+  background-color: #f6f5ef;
+  padding-bottom: 150px; /* 내용이 footer와 겹치지 않도록 패딩 추가 */
+}
+
+.main_body>.inner>div {
+  position: relative;
+  top: 1.5em;
+}
+
+.season_menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 0;
+}
+
+.season>th {
+  border: 2px solid #333;
+  text-align: center;
+  width: 50vh;
+  height: 5vh;
+}
+
+.season>th:hover {
+  background-color: white;
+  color: black;
+}
+
+/* season_content 요소를 Flexbox로 설정 */
+.season_content {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.season_content .content-item {
+  display: flex; /* 이미지와 텍스트를 옆으로 나란히 배치 */
+  align-items: center; /* 수직 가운데 정렬 */
+}
+
+.season_content .text-container {
+  flex: 1; /* 남은 공간을 모두 차지 */
+}
+
+.season_content .image-container {
+  margin-right: 20px; /* 이미지와 텍스트 사이 간격 조정 */
+}
+
+.content-item + .content-item {
+  margin-top: 20px;
+}
+
+/* 이미지 스타일링 */
+.season_content .image-container img {
+  width: 300px; /* 이미지 너비 설정 */
+  height: auto; /* 이미지 높이 설정 */
+  object-fit: cover; /* 이미지가 자리를 차지하도록 설정 */
+  object-position: center center; /* 이미지를 수직과 수평으로 가운데 정렬 */
+}
+
+/* 텍스트 스타일링 */
+.season_content .text-container {
+  flex: 1; /* 텍스트 컨테이너가 남은 공간을 모두 차지하도록 설정 */
+}
+
+.season_content .text-container p {
+  font-size: 16px; /* 텍스트 크기 조정 */
+  color: #333; /* 텍스트 색상 지정 */
+}
+
+/* footer */
+footer {
+  background-color: #F9F0E7;
+  border-top: 1px solid #c8c8c8;
+}
+
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
+
+footer .menu li {
+  position: relative;
+}
+
+footer .menu li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+
+footer .menu li:last-child::before {
+  display: none;
+}
+
+footer .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+
+footer .menu li a.green {
+  color: #669900;
+}
+
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer .info span:last-child {
+  margin-right: 0;
+}
+
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
