@@ -2,9 +2,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="com.example.demo.basic.domain.member.Member" %>
 <%@ page import="com.example.demo.basic.domain.member.MemoryMemberRepository" %>
+<%@ page import="org.springframework.beans.propertyeditors.URLEditor" %>
+<%@ page import="java.net.URLDecoder" %>
+<%@ page import="java.nio.charset.StandardCharsets" %>
 <%
-    MemoryMemberRepository memberRepository = MemoryMemberRepository.getInstance();
-    String id = request.getParameter("id");
+    Cookie[] cookies = request.getCookies();
+    String id = null;
+    if(cookies!=null){
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().contains("id")) {
+                    id = cookie.getValue();
+            }
+
+        }
+    }
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -38,6 +49,9 @@
         </a>
         <div class="sub-menu">
             <ul class="menu">
+                <li>
+                    <a href ="#"> <%=id%>님 </a>
+                </li>
                 <li>
                     <a href="/member/login">로그인</a>
                 </li>
